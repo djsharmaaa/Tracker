@@ -58,8 +58,8 @@
 /* Burger Menu Icon */
 .burger-menu {
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   font-size: 40px;
   cursor: pointer;
   z-index: 1100; 
@@ -71,7 +71,8 @@
 }
 
 .burger-menu.open {
-  left: calc(200px + 10px); 
+  top: -15px;
+  left: calc(165px + 0px);
   transition: all 0.3s ease;
 }
 

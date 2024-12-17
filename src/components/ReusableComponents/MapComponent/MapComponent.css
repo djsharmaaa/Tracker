@@ -38,8 +38,8 @@
   }
 
   .map-container .leaflet-container {
-    width: 90%;
+    width: 100%;
     margin: 0px;
-    height: 400px; 
+    height: 350px; 
   }
 }
