@@ -1,3 +1,4 @@
+/* Sidebar Styles */
 .sidebar {
   width: 200px;
   height: 100vh;
@@ -6,6 +7,19 @@
   flex-direction: column;
   background-color: #f8f9fa;
   border-right: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Hidden Sidebar for Small Screens */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
 }
 
 .logo {
@@ -39,4 +53,30 @@
 .menu li a:hover {
   background-color: #e9ecef;
   color: #0056b3;
+}
+
+/* Burger Menu Icon */
+.burger-menu {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 1100; 
+  transition: all 0.3s ease;
+}
+
+.burger-menu i {
+  color: #333;
+}
+
+.burger-menu.open {
+  left: calc(50% - 50px); 
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
 }

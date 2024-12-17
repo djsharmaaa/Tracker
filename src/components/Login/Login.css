@@ -4,6 +4,7 @@
   height: 100vh;
 }
 
+/* Left Side - Logo Section */
 .left-side {
   flex: 1;
   background-color: #f0f0f0;
@@ -16,6 +17,7 @@
   width: 250px; /* Adjust the size of the logo */
 }
 
+/* Right Side - Form Section */
 .right-side {
   flex: 1;
   background-color: white;
@@ -28,6 +30,8 @@
 
 .right-side h2 {
   margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 input {
@@ -55,4 +59,63 @@ button:hover {
 .error-message {
   color: red;
   margin-bottom: 10px;
+  text-align: center;
 }
+
+/* Responsive Design */
+
+/* For tablets (screen width less than 992px) */
+@media (max-width: 992px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    flex: 1; 
+    padding: 20px;
+  }
+
+  .left-side .logo {
+    width: 200px;
+  }
+
+  .right-side {
+    flex: 1.5;
+    padding: 15px;
+  }
+
+  .right-side h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* For mobile phones (screen width less than 768px) */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .right-side {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .right-side h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  input {
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  button {
+    padding: 8x;
+  }
+} 

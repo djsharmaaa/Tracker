@@ -1,6 +1,45 @@
+/* General Map Container Styles */
 .map-container {
-
   margin-top: 20px;
   padding: 20px;
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.map-container .leaflet-container {
+  width: 85%;
+  height: 480px;
+  margin-left: 200px ;
+ z-index: 1;
+}
+
+/* Tablet View (Width: 992px and below) */
+@media (max-width: 992px) {
+  .map-container {
+    padding: 10px;
+  }
+
+  .map-container .leaflet-container {
+    width: 75%;
+    height: 400px;
+    margin-right: 2px;
+  }
+}
+
+/* Mobile View (Width: 768px and below) */
+@media (max-width: 768px) {
+  .map-container {
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .map-container .leaflet-container {
+    width: 90%;
+    margin: 0px;
+    height: 400px; 
+  }
 }

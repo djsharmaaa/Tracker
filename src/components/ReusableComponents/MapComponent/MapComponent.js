@@ -16,9 +16,8 @@ function MapComponent({ vehicleData }) {
       <MapContainer
         center={[23.0225, 72.5714]} 
         zoom={13}
-        style={{ height: '480px', width: '85%' , marginLeft:'200px'}}
+       
       >
-        {/* OpenStreetMap Tile Layer */}
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

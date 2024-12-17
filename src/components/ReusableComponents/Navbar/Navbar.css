@@ -1,17 +1,19 @@
+/* Navbar General Styles */
 .navbar {
   height: 60px;
-  background-color: #f8f9fa; 
+  background-color: #f8f9fa;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  margin-left: 200px; 
+  margin-left: 200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar {
   padding: 5px;
   width: 200px;
+  transition: all 0.3s ease-in-out;
 }
 
 .notification-icon {
@@ -29,3 +31,71 @@
   border-radius: 50%;
 }
 
+/* Responsive Design */
+
+/* For tablets (screen width less than 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    margin-left: 23%;
+    padding: 0 10px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;
+  }
+
+  .search-bar {
+    width: 150px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .notification-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* For mobile phones (screen width less than 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    margin-left: 10%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-title {
+    font-size: 1.1rem;
+  }
+
+  .search-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile span {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+}

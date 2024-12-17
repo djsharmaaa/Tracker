@@ -8,7 +8,7 @@ function AdminDashboard() {
 
   const menuSections = [
     {
-      heading: null, // No heading for the first section
+      heading: null,
       items: [
         { name: 'Dashboard', link: '/dashboard', icon: 'bi bi-speedometer2' },
         { name: 'Tracker', link: '/tracker', icon: 'bi bi-map' },

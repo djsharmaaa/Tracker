@@ -1,30 +1,31 @@
+/* General Styles */
 .Status-tabs {
   width: 65%;
-  margin-left: 25%;
+  margin-left: 20%;
+ 
 }
 
 .tab-headers {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  
 }
 
 .tab-header {
   flex: 1;
   text-align: center;
   border-radius: 4%;
-  padding: 30px 20px ;
+  padding: 30px 20px;
   cursor: pointer;
   font-weight: bold;
   border: 2px solid grey;
   transition: border-color 0.3s, background-color 0.3s;
   margin-right: 20px;
 }
-.tab-header:last-child {
-  margin-right: 0;
-}
 
+/* .tab-header:last-child {
+  margin-right: 0;
+} */
 
 .tab-heading {
   font-size: 12px;
@@ -33,5 +34,60 @@
 
 .tab-content {
   font-size: 25px;
+}
 
+/* Responsive for Tablets (Width: 992px and below) */
+@media (max-width: 992px) {
+  .Status-tabs {
+    max-width: 80%; 
+    margin-left: 28%;
+ 
+  }
+
+  .tab-headers {
+    flex-wrap: wrap; 
+  }
+
+  .tab-header {
+    flex: 0 0 calc(50% - 20px); /* Two tabs per row */
+    margin-bottom: 15px;
+    padding: 20px 15px;
+    font-size: 14px;
+  }
+
+  .tab-heading {
+    font-size: 11px;
+  }
+
+  .tab-content {
+    font-size: 20px;
+  }
+}
+
+/* Responsive for Mobile Phones (Width: 768px and below) */
+@media (max-width: 768px) {
+  .Status-tabs {
+    width: 100%; 
+    margin: auto;
+  }
+
+  .tab-headers {
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  .tab-header {
+    width: 100%; 
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+
+  .tab-heading {
+    font-size: 10px;
+  }
+
+  .tab-content {
+    font-size: 18px;
+  }
 }
