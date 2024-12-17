@@ -71,7 +71,7 @@
 }
 
 .burger-menu.open {
-  left: calc(50% - 50px); 
+  left: calc(200px + 10px); 
   transition: all 0.3s ease;
 }
 
