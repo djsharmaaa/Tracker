@@ -1,0 +1,42 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  border-right: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 18px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.menu li a {
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+  background-color: #e9ecef;
+  color: #0056b3;
+}

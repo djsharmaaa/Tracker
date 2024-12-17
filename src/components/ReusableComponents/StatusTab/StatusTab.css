@@ -1,0 +1,37 @@
+.Status-tabs {
+  width: 65%;
+  margin-left: 25%;
+}
+
+.tab-headers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  
+}
+
+.tab-header {
+  flex: 1;
+  text-align: center;
+  border-radius: 4%;
+  padding: 30px 20px ;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid grey;
+  transition: border-color 0.3s, background-color 0.3s;
+  margin-right: 20px;
+}
+.tab-header:last-child {
+  margin-right: 0;
+}
+
+
+.tab-heading {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tab-content {
+  font-size: 25px;
+
+}
