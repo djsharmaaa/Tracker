@@ -14,7 +14,7 @@
 }
 
 .left-side .logo {
-  width: 250px; /* Adjust the size of the logo */
+  width: 250px; 
 }
 
 /* Right Side - Form Section */
@@ -76,11 +76,11 @@ button:hover {
   }
 
   .left-side .logo {
-    width: 200px;
+    width: 200px; /* Smaller logo */
   }
 
   .right-side {
-    flex: 1.5;
+    flex: 1;
     padding: 15px;
   }
 
@@ -95,10 +95,7 @@ button:hover {
     flex-direction: column;
   }
 
-  .left-side {
-    flex: 1;
-    padding: 20px;
-  }
+ 
 
   .right-side {
     width: 100%;
@@ -116,6 +113,6 @@ button:hover {
   }
 
   button {
-    padding: 8x;
+    padding: 8px;
   }
-} 
+}
