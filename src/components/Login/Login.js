@@ -1,105 +1,108 @@
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-
-// function Login() {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-//   const navigate = useNavigate();
-
-//   const handleLogin = (e) => {
-//     e.preventDefault();
-//     // Replace with actual authentication logic
-//     if (email === "admin@site.com") {
-//       navigate('/admin');
-//     } else if (email === "driver@site.com") {
-//       navigate('/driver');
-//     } else if (email === "customer@site.com") {
-//       navigate('/customer');
-//     } else {
-//       alert("Invalid credentials");
-//     }
-//   };
-
-//   return (
-//     <div className="login">
-//       <h2>Login</h2>
-//       <form onSubmit={handleLogin}>
-//         <input 
-//           type="email" 
-//           placeholder="Email" 
-//           value={email} 
-//           onChange={(e) => setEmail(e.target.value)} 
-//           required 
-//         />
-//         <input 
-//           type="password" 
-//           placeholder="Password" 
-//           value={password} 
-//           onChange={(e) => setPassword(e.target.value)} 
-//           required 
-//         />
-//         <button type="submit">Login</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default Login;
-
-
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css';  
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setError(''); 
+    setError("");
 
     // Replace with actual authentication logic
     if (email === "admin@ddk.com" && password === "admin123") {
-      navigate('/admin');
+      navigate("/admin");
     } else if (email === "driver@ddk.com" && password === "driver123") {
-      navigate('/driver');
+      navigate("/driver");
     } else if (email === "customer@ddk.com" && password === "customer123") {
-      navigate('/customer');
+      navigate("/customer");
     } else {
       setError("Invalid credentials");
-      setPassword(''); 
+      setPassword("");
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
     <div className="login-container">
+      {/* Left Side */}
       <div className="left-side">
+        <div className="logo-heading">
+          <h2>Doordarshan</h2>
+        </div>
         <img src="/images/DD2.png" alt="Logo" className="logo" />
       </div>
 
+      {/* Right Side */}
       <div className="right-side">
-        <h2>Doordarshan Car Tracking</h2>
+        <div className="logo-heading-right">
+          <h2>Login</h2>
+        </div>
         {error && <div className="error-message">{error}</div>}
         <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Login</button>
+          {/* Email Field */}
+          <div className="input-group">
+            <i className="bi bi-envelope input-icon"></i>
+            <input
+            className="ms-2"
+              type="email"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          {/* Password Field */}
+          <div className="input-group">
+            <i className="bi bi-lock input-icon"></i>
+            <input
+            className="ms-2"
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <i
+              className={`bi password-toggle ${
+                showPassword ? "bi-eye-slash" : "bi-eye"
+              }`}
+              onClick={togglePasswordVisibility}
+            ></i>
+          </div>
+          {/* Remember Me and Forgot Password */}
+          <div className="options">
+            <label>
+              <input
+              className="ms-2 my-3"
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+              />{" "}
+              Remember Me
+            </label>
+
+            <a href="/forgot-password" className="forgot-password my-3">
+              Forgot Password?
+            </a>
+          </div>
+          <button  className="Login-button mx-auto my-4">Login</button>
+       
+          <button className="google-button mx-auto my-4">
+            <i className="bi bi-google "></i> Login with Google
+          </button>
         </form>
+  
+     
+       
       </div>
     </div>
   );

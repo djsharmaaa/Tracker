@@ -1,65 +1,160 @@
-/* Login Page Styles */
+/* General Styles */
 .login-container {
   display: flex;
   height: 100vh;
+  flex-direction: row;
 }
 
-/* Left Side - Logo Section */
-.left-side {
-  flex: 1;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-side .logo {
-  width: 250px; 
-}
-
-/* Right Side - Form Section */
+.left-side,
 .right-side {
   flex: 1;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
 }
 
-.right-side h2 {
-  margin-bottom: 20px;
-  font-size: 1.8rem;
+.right-side {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Side Styles */
+.left-side {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-side .logo-heading {
+  width: 100%;
+  color: whitesmoke;
+  background-color: #e96c0c;
+  padding: 15px;
+  margin-bottom: 18%;
   text-align: center;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.left-side .logo {
+  width: 250px;
 }
 
-button {
+/* Right Side - Responsive Form Section */
+.logo-heading-right {
+  color: #e96c0c;
+  margin-bottom: 5%;
+  text-decoration: underline;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Input Fields */
+form{
+  min-width: 50%;
+}
+.input-group {
+  position: relative;
   width: 100%;
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 35px 10px 30px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-group .input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0;
+}
+
+.options .forgot-password {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.options .forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.Login-button {
+  width: 100%;
+  max-width: 500px;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #e96c0c;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Login-button:hover {
+  background-color: #e89f67;
+}
+
+.google-button {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  background-color: #f4eae4;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
+.google-button i {
+  margin-right: 10px;
+  color: #dd4b39;
 }
 
+.google-button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Error Message */
 .error-message {
   color: red;
   margin-bottom: 10px;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -69,23 +164,40 @@ button:hover {
   .login-container {
     flex-direction: column;
   }
+  .left-side{
+    flex: 1 1;
+    background-color: white;
+  }
 
-  .left-side {
-    flex: 1; 
-    padding: 20px;
+  .left-side .logo-heading {
+    padding: 8px;
+    font-size: 1rem;
+    margin-bottom: 5px;
   }
 
   .left-side .logo {
-    width: 200px; /* Smaller logo */
+    width: 150px;
   }
-
   .right-side {
-    flex: 1;
     padding: 15px;
   }
 
-  .right-side h2 {
-    font-size: 1.5rem;
+  .right-side .logo-heading-right {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+
+
+  input {
+    padding: 8px 35px 8px 30px;
+    font-size: 0.9rem;
+  }
+
+  .Login-button,
+  .google-button {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
 
@@ -94,25 +206,49 @@ button:hover {
   .login-container {
     flex-direction: column;
   }
-
- 
-
-  .right-side {
-    width: 100%;
-    padding: 10px;
+  .left-side{
+    flex: 0.2 1;
+    background-color: white;
   }
 
-  .right-side h2 {
-    font-size: 1.3rem;
+  .left-side .logo-heading {
+    padding: 8px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .left-side .logo {
+    width: 100px;
+  }
+
+  .right-side {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .right-side .logo-heading-right {
+    font-size: 1.2rem;
     margin-bottom: 15px;
   }
 
-  input {
-    padding: 8px;
-    margin: 8px 0;
+  .input-group {
+    width: 100%;
   }
 
-  button {
-    padding: 8px;
+  .options {
+    flex-direction: row;
+  }
+
+  .options .forgot-password {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #e96c0c;
+    text-decoration: underline;
+  }
+
+  .Login-button,
+  .google-button {
+    width: 100%;
+    padding: 10px;
   }
 }
