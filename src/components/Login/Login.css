@@ -160,38 +160,42 @@ form{
 /* Responsive Design */
 
 /* For tablets (screen width less than 992px) */
+
+/* For tablets (screen width less than 992px) */
 @media (max-width: 992px) {
   .login-container {
     flex-direction: column;
+    align-items: center;
   }
-  .left-side{
-    flex: 1 1;
+
+  .left-side {
+    flex: 0.5 1;
     background-color: white;
+    width: 100%;
   }
 
   .left-side .logo-heading {
     padding: 8px;
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 5%;
   }
 
   .left-side .logo {
-    width: 150px;
+    width: 180px;
   }
+
   .right-side {
-    padding: 15px;
+    padding: 10%;
+    width: 100%;
   }
 
   .right-side .logo-heading-right {
     font-size: 1.4rem;
     margin-bottom: 20px;
   }
-
-
-
-  input {
-    padding: 8px 35px 8px 30px;
-    font-size: 0.9rem;
+  form{
+    min-width: 80%;
+    margin: auto;
   }
 
   .Login-button,
@@ -206,24 +210,27 @@ form{
   .login-container {
     flex-direction: column;
   }
-  .left-side{
-    flex: 0.2 1;
+
+  .left-side {
+    flex: 0.5 1;
     background-color: white;
+    width: 100%;
   }
 
   .left-side .logo-heading {
     padding: 8px;
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 5%;
   }
 
   .left-side .logo {
-    width: 150px;
+    width: 180px;
   }
 
   .right-side {
     padding: 10px;
     align-items: center;
+    min-width: 80%;
   }
 
   .right-side .logo-heading-right {
@@ -249,6 +256,6 @@ form{
   .Login-button,
   .google-button {
     width: 100%;
-    padding: 10px;
+    padding: 14px;
   }
 }

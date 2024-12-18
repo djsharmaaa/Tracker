@@ -49,10 +49,10 @@ function Login() {
         {error && <div className="error-message">{error}</div>}
         <form onSubmit={handleLogin}>
           {/* Email Field */}
-          <div className="input-group">
+          <div className="input-group ">
             <i className="bi bi-envelope input-icon"></i>
             <input
-            className="ms-2"
+              className="ms-2"
               type="email"
               placeholder="Email Address"
               value={email}
@@ -61,10 +61,10 @@ function Login() {
             />
           </div>
           {/* Password Field */}
-          <div className="input-group">
+          <div className="input-group  my-5">
             <i className="bi bi-lock input-icon"></i>
             <input
-            className="ms-2"
+              className="ms-2"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
               value={password}
@@ -79,10 +79,10 @@ function Login() {
             ></i>
           </div>
           {/* Remember Me and Forgot Password */}
-          <div className="options">
+          <div className="options my-3">
             <label>
               <input
-              className="ms-2 my-3"
+                className="ms-2 "
                 type="checkbox"
                 checked={rememberMe}
                 onChange={(e) => setRememberMe(e.target.checked)}
@@ -94,15 +94,12 @@ function Login() {
               Forgot Password?
             </a>
           </div>
-          <button  className="Login-button mx-auto my-4">Login</button>
-       
+          <button className="Login-button mx-auto my-5">Login</button>
+
           <button className="google-button mx-auto mt-5">
             <i className="bi bi-google "></i> Login with Google
           </button>
         </form>
-  
-     
-       
       </div>
     </div>
   );
