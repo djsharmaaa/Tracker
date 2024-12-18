@@ -79,7 +79,7 @@ function Login() {
             ></i>
           </div>
           {/* Remember Me and Forgot Password */}
-          <div className="options my-3">
+          <div className="options ">
             <label>
               <input
                 className="ms-2 "
