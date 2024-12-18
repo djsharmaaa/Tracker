@@ -11,6 +11,8 @@
   z-index: 1000;
 }
 
+
+
 /* Hidden Sidebar for Small Screens */
 @media (max-width: 768px) {
   .sidebar {
@@ -75,6 +77,7 @@
   left: calc(165px + 0px);
   transition: all 0.3s ease;
 }
+
 
 @media (min-width: 769px) {
   .burger-menu {

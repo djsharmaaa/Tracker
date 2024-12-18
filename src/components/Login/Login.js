@@ -96,7 +96,7 @@ function Login() {
           </div>
           <button  className="Login-button mx-auto my-4">Login</button>
        
-          <button className="google-button mx-auto my-4">
+          <button className="google-button mx-auto mt-5">
             <i className="bi bi-google "></i> Login with Google
           </button>
         </form>
