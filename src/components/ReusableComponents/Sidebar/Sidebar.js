@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
 function Sidebar({
@@ -24,7 +25,9 @@ function Sidebar({
 
       {/* Sidebar */}
       <div
-        className={`sidebar bg-light shadow-sm ${isSidebarOpen ? "active" : ""}`}
+        className={`sidebar bg-light shadow-sm ${
+          isSidebarOpen ? "active" : ""
+        } d-md-block`}
       >
         {/* Logo Section */}
         <div className="logo text-center p-4">
@@ -45,13 +48,15 @@ function Sidebar({
               )}
               {section.items.map((item, itemIndex) => (
                 <li key={itemIndex} className="py-2 px-3">
-                  <a
-                    href={item.link}
+                  <NavLink
+                    to={item.link}
                     className="text-decoration-none text-dark d-block"
+                    activeClassName="active"
+                    end
                   >
                     {item.icon && <i className={`${item.icon} me-2`}></i>}
                     {item.name}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </div>

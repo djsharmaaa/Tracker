@@ -11,6 +11,18 @@
   z-index: 1000;
 }
 
+.menu li a.active {
+  background-color: #e9ecef;
+  color: #0056b3;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  background-color: #f8f9fa;
+  color: #0056b3;
+}
+
 
 
 /* Hidden Sidebar for Small Screens */

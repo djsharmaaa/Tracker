@@ -4,15 +4,32 @@ import Navbar from '../ReusableComponents/Navbar/Navbar';
 import StatusTab from '../ReusableComponents/StatusTab/StatusTab';
 import MapComponent from '../ReusableComponents/MapComponent/MapComponent';
 
-function AdminDashboard() {
+function Admin() {
+  const yourVehicleData = [
+    {
+      lat: 28.5496,
+      lng: 77.1212,
+      name: 'Vehicle 1',
+      status: 'Active',
+      lastUpdated: '2024-12-23 10:00 AM',
+    },
+    {
+      lat: 23.2156,
+      lng: 72.6369,
+      name: 'Vehicle 2',
+      status: 'Inactive',
+      lastUpdated: '2024-12-23 09:30 AM',
+    },
+  ];
+  
 
   const menuSections = [
     {
-      heading: null,
+      heading: null, // No heading for the first section
       items: [
-        { name: 'Dashboard', link: '/dashboard', icon: 'bi bi-speedometer2' },
-        { name: 'Tracker', link: '/tracker', icon: 'bi bi-map' },
-        { name: 'Report', link: '/report', icon: 'bi bi-bar-chart' },
+        { name: 'Dashboard', link: '/Admin/Dashboard', icon: 'bi bi-speedometer2' },
+        { name: 'Tracker', link: '/Admin/Tracker', icon: 'bi bi-map' },
+        { name: 'Report', link: '/Admin/Report', icon: 'bi bi-bar-chart' },
       ],
     },
     {
@@ -57,7 +74,7 @@ function AdminDashboard() {
 
     <div >
     <Navbar 
-        title="Dashboard"
+        title="Admin Overview"
         placeholder="Search for something..."
         profileImg="/images/DD.png"
         profileName="Admin"
@@ -65,10 +82,11 @@ function AdminDashboard() {
       <div className="mt-5">
           <StatusTab tabs={tabsData} />
         </div>
-        <MapComponent  />
+        <MapComponent vehicleData={yourVehicleData} />
+
     </div>
   </div>
   );
 }
 
-export default AdminDashboard;
+export default Admin;

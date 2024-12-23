@@ -1,0 +1,171 @@
+/* Dashboard.css */
+
+/* General Styles */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Driver Details */
+.driver-details {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 12%;
+
+}
+
+.driver-details h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-striped tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table th {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+/* Dropdown Menu */
+.dropdown .dropdown-toggle {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropdown .dropdown-menu {
+  min-width: auto;
+  font-size: 0.9rem;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown .dropdown-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.dropdown .dropdown-menu button:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown .dropdown-menu button.text-danger {
+  color: #ff4d4f;
+}
+
+.dropdown .dropdown-menu button.text-danger:hover {
+  background-color: #ffe6e6;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.pagination .page-item {
+  cursor: pointer;
+}
+
+.pagination .page-link {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #fff;
+  color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination .page-link:hover {
+  background: #f5f5f5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .driver-details {
+    padding: 15px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .dropdown .dropdown-toggle {
+    font-size: 0.8rem;
+  }
+
+  .dropdown .dropdown-menu button {
+    font-size: 0.8rem;
+  }
+
+  .pagination .page-link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .driver-details h4 {
+    font-size: 1.2rem;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.8rem;
+  }
+
+  .dropdown .dropdown-toggle {
+    font-size: 0.7rem;
+  }
+
+  .pagination .page-link {
+    font-size: 0.7rem;
+  }
+}
